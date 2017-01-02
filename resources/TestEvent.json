@@ -1,0 +1,24 @@
+{
+  "session": {
+    "sessionId": "SessionId.4e25cab5-d932-44b3-8a2a-a70353b94d13",
+    "application": {
+      "applicationId": "amzn1.ask.skill.3956afb2-ceb8-46d2-bd6e-16f50055b932"
+    },
+    "attributes": {},
+    "user": {
+      "userId": "amzn1.ask.account.AEDXLVVQUJBOIP2Z2J5GSWB3WZ23ZHO4A3Q5AJBDUPW3SXGZEJBJY2OG623MK4PCNGA5DBYDS5WSR6Q5S2ZEFKFUEXJG3VRIUY2QYWM6SYQ37DQVM2SWBFNSYSKU3AOKH4GLZXUZI6WRJXY7G242RDTFQUUIRI46XOYWKDTQM2GNDJSGLU3HFZJFRH2XYYIWLB4ESXUKORWHL5A"
+    },
+    "new": true
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.b9c50d7a-2f59-462c-b5b0-bb08057cf247",
+    "locale": "en-US",
+    "timestamp": "2017-01-02T10:23:30Z",
+    "intent": {
+      "name": "DiscordianDateIntent",
+      "slots": {}
+    }
+  },
+  "version": "1.0"
+}
