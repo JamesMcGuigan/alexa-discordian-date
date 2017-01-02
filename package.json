@@ -7,7 +7,7 @@
     "url": "https://github.com/JamesMcGuigan/alexa-discordian-date"
   },
   "licence": "MIT",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
     "start": "npm run test; npm run build;",
     "test": "node src/discordianDate.js",
