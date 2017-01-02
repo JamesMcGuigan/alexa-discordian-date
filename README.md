@@ -34,11 +34,21 @@ open http://localhost:8080/alexa/alexa-discordian-date
 ```
 DiscordianDateTodayIntent	for the discordian date
 DiscordianDateTodayIntent	for the date
-DiscordianDateIntent	for discordian date {Date}
+DiscordianDateIntent	for the discordian date {Date}
 DiscordianDateIntent	the discordian date {Date}
+DiscordianDateIntent	for discordian date {Date}
 DiscordianDateIntent	discordian date {Date}
-DiscordianDateIntent	for {Date}
+DiscordianDateIntent	for the date {Date}
+DiscordianDateIntent	the date {Date}
+DiscordianDateIntent	for date {Date}
+DiscordianDateIntent	date {Date}
+DiscordianDateIntent	for the discordian {Date}
+DiscordianDateIntent	the discordian {Date}
+DiscordianDateIntent	for discordian {Date}
+DiscordianDateIntent	discordian {Date}
+DiscordianDateIntent	for the {Date}
 DiscordianDateIntent	the {Date}
+DiscordianDateIntent	for {Date}
 DiscordianDateIntent	{Date}
 ```
 
