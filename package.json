@@ -1,10 +1,10 @@
 {
-  "name": "alexia-discordian-date",
-  "description": "Amazon Echo Skill: Alexia ask discordian date",
+  "name": "alexa-discordian-date",
+  "description": "Amazon Echo Skill: Alexa ask discordian date",
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url":  "https://github.com/JamesMcGuigan/alexia-discordian-date"
+    "url":  "https://github.com/JamesMcGuigan/alexa-discordian-date"
   },
   "licence": "MIT",
   "main": "src/index.js",
