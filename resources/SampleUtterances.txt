@@ -1,3 +1,8 @@
-DiscordianDateIntent date
-DiscordianDateIntent what is the date
-DiscordianDateIntent fnord
+DiscordianDateTodayIntent	for the discordian date
+DiscordianDateTodayIntent	for the date
+DiscordianDateIntent	for discordian date {Date}
+DiscordianDateIntent	the discordian date {Date}
+DiscordianDateIntent	discordian date {Date}
+DiscordianDateIntent	for {Date}
+DiscordianDateIntent	the {Date}
+DiscordianDateIntent	{Date}

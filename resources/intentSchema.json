@@ -1,7 +1,17 @@
 {
   "intents": [
     {
-      "intent": "DiscordianDateIntent"
+      "intent": "DiscordianDateTodayIntent",
+      "slots": []
+    },
+    {
+      "intent": "DiscordianDateIntent",
+      "slots": [
+        {
+          "name": "Date",
+          "type": "AMAZON.DATE"
+        }
+      ]
     }
   ]
 }

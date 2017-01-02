@@ -1,0 +1,11 @@
+{
+  "version": "1.0",
+  "sessionAttributes": {},
+  "response": {
+    "shouldEndSession": true,
+    "outputSpeech": {
+      "type": "SSML",
+      "ssml": "<speak>tomorrow is Pungenday, the 3rd day of Chaos in the YOLD 3183</speak>"
+    }
+  }
+}

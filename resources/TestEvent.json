@@ -1,24 +1,28 @@
 {
+  "version": "1.0",
   "session": {
-    "sessionId": "SessionId.4e25cab5-d932-44b3-8a2a-a70353b94d13",
+    "new": false,
+    "sessionId": "amzn1.echo-api.session.abeee1a7-aee0-41e6-8192-e6faaed9f5ef",
     "application": {
-      "applicationId": "amzn1.ask.skill.3956afb2-ceb8-46d2-bd6e-16f50055b932"
+      "applicationId": "amzn1.echo-sdk-ams.app.000000-d0ed-0000-ad00-000000d00ebe"
     },
     "attributes": {},
     "user": {
-      "userId": "amzn1.ask.account.AEDXLVVQUJBOIP2Z2J5GSWB3WZ23ZHO4A3Q5AJBDUPW3SXGZEJBJY2OG623MK4PCNGA5DBYDS5WSR6Q5S2ZEFKFUEXJG3VRIUY2QYWM6SYQ37DQVM2SWBFNSYSKU3AOKH4GLZXUZI6WRJXY7G242RDTFQUUIRI46XOYWKDTQM2GNDJSGLU3HFZJFRH2XYYIWLB4ESXUKORWHL5A"
-    },
-    "new": true
+      "userId": "amzn1.account.AM3B227HF3FAM1B261HK7FFM3A2"
+    }
   },
   "request": {
     "type": "IntentRequest",
-    "requestId": "EdwRequestId.b9c50d7a-2f59-462c-b5b0-bb08057cf247",
-    "locale": "en-US",
-    "timestamp": "2017-01-02T10:23:30Z",
+    "requestId": "amzn1.echo-api.request.6919844a-733e-4e89-893a-fdcb77e2ef0d",
+    "timestamp": "2015-05-13T12:34:56Z",
     "intent": {
       "name": "DiscordianDateIntent",
-      "slots": {}
+      "slots": {
+        "Date": {
+          "value": "tomorrow",
+          "name": "Date"
+        }
+      }
     }
-  },
-  "version": "1.0"
+  }
 }

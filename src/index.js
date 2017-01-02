@@ -1,21 +1,49 @@
-'use strict';
-var APP_ID = "amzn1.ask.skill.3956afb2-ceb8-46d2-bd6e-16f50055b932";
-var AlexaSkill = require('./AlexaSkill');
+require('datejs');
+var alexa = require('alexa-app');
 var discordianDate = require('./discordianDate');
 
-var DiscordianDateService = function() {
-  AlexaSkill.call(this, APP_ID);
-};
-DiscordianDateService.prototype = Object.create(AlexaSkill.prototype);
+// Allow this module to be reloaded by hotswap when changed
+module.change_code = 1;
 
-DiscordianDateService.prototype.intentHandlers = {
-  'DiscordianDateIntent': function(intent, session, response) {
-    response.tell(discordianDate());
-  }
-};
-DiscordianDateService.prototype.eventHandlers.onLaunch = DiscordianDateService.prototype.intentHandlers['DiscordianDateIntent'];
+// Define an alexa-app
+var app = new alexa.app('alexa-discordian-date');
 
-exports.handler = function(event, context) {
-  var discordianDateService = new DiscordianDateService();
-  discordianDateService.execute(event, context);
-};
+
+app.launch(function(request, response) {
+	response.say("Today is, " + discordianDate(date));
+});
+app.intent('DiscordianDateTodayIntent',
+	{
+		"utterances":[
+			"for the {discordian|} date"
+		]
+	},
+	function(request, response) {
+		response.say("Today is, " + discordianDate(date));
+	}
+);
+app.intent('DiscordianDateIntent',
+  {
+		"slots": {
+      "Date":     "AMAZON.DATE"
+		},
+		"utterances":[
+			"{for|the|} {discordian date|} {Date}"
+		]
+	},
+  function(request, response) {
+		var date = Date.parse(request.slot('Date'));
+
+		if( !date ) {
+			response.say("Fnord!");
+			return;
+		}
+		if( date.same().day(Date.today()) ) {
+			response.say("Today is ");
+		} else {
+			response.say(request.slot('Date') + " is ");
+		}
+		response.say(discordianDate(date));
+	}
+);
+module.exports = app;

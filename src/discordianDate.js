@@ -3,7 +3,7 @@
  *
  * lang: JavaScript
  * author: jklu
- * contributors: James McGuigan
+ * contributors: JamesMcGuigan
  *
  * changelog:
  * - Modified to return same output syntax as unix ddate + module.exports - James McGuigan, 2/Chaos/3183
@@ -90,7 +90,7 @@ function discordianDate(date) {
           : (seasonDay % 10 == 3) ? 'rd'
                                   : 'th';
 
-  return (date.isToday() ? "Today is " : '')
+  return "" //(date.isToday() ? "Today is " : '')
          + dayOfWeek
          + ", the " + seasonDay + nth
          + " day of " + season

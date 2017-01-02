@@ -1,16 +1,23 @@
 {
   "name": "alexa-discordian-date",
-  "description": "Amazon Echo Skill: Alexa ask discordian date",
-  "version": "1.0.0",
+  "description": "Amazon Echo Skill: Alexa discordian date",
+  "version": "2.0.0",
   "repository": {
     "type": "git",
-    "url":  "https://github.com/JamesMcGuigan/alexa-discordian-date"
+    "url": "https://github.com/JamesMcGuigan/alexa-discordian-date"
   },
   "licence": "MIT",
   "main": "src/index.js",
   "scripts": {
     "start": "npm run test; npm run build;",
-    "test":  "node src/discordianDate.js",
-    "build": "zip DiscordianDateLambda.zip --junk-paths src/*"
+    "test": "node src/discordianDate.js",
+    "build": "zip -r DiscordianDateLambda.zip *"
+  },
+  "dependencies": {
+    "alexa-app": "^2.3.4",
+    "datejs": "^1.0.0-rc3"
+  },
+  "devDependencies": {
+    "alexa-app-server": "^2.3.1"
   }
 }
