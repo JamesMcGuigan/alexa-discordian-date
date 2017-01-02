@@ -1,8 +1,31 @@
 DiscordianDateTodayIntent	for the discordian date
+DiscordianDateTodayIntent	the discordian date
+DiscordianDateTodayIntent	for discordian date
+DiscordianDateTodayIntent	discordian date
 DiscordianDateTodayIntent	for the date
-DiscordianDateIntent	for discordian date {Date}
-DiscordianDateIntent	the discordian date {Date}
-DiscordianDateIntent	discordian date {Date}
-DiscordianDateIntent	for {Date}
-DiscordianDateIntent	the {Date}
-DiscordianDateIntent	{Date}
+DiscordianDateTodayIntent	the date
+DiscordianDateTodayIntent	for date
+DiscordianDateTodayIntent	date
+DiscordianDateTodayIntent	for the discordian
+DiscordianDateTodayIntent	the discordian
+DiscordianDateTodayIntent	for discordian
+DiscordianDateTodayIntent	discordian
+DiscordianDateTodayIntent	for the
+DiscordianDateTodayIntent	the
+DiscordianDateTodayIntent	for
+DiscordianDateIntent	for the discordian date Date
+DiscordianDateIntent	the discordian date Date
+DiscordianDateIntent	for discordian date Date
+DiscordianDateIntent	discordian date Date
+DiscordianDateIntent	for the date Date
+DiscordianDateIntent	the date Date
+DiscordianDateIntent	for date Date
+DiscordianDateIntent	date Date
+DiscordianDateIntent	for the discordian Date
+DiscordianDateIntent	the discordian Date
+DiscordianDateIntent	for discordian Date
+DiscordianDateIntent	discordian Date
+DiscordianDateIntent	for the Date
+DiscordianDateIntent	the Date
+DiscordianDateIntent	for Date
+DiscordianDateIntent	Date

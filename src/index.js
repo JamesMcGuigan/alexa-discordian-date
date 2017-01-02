@@ -10,16 +10,16 @@ var app = new alexa.app('alexa-discordian-date');
 
 
 app.launch(function(request, response) {
-	response.say("Today is, " + discordianDate(date));
+	response.say("Today is... " + discordianDate());
 });
 app.intent('DiscordianDateTodayIntent',
 	{
 		"utterances":[
-			"for the {discordian|} date"
+			"{for|} {the|} {discordian|} {date|}"
 		]
 	},
 	function(request, response) {
-		response.say("Today is, " + discordianDate(date));
+		response.say("Today is... " + discordianDate());
 	}
 );
 app.intent('DiscordianDateIntent',
@@ -28,7 +28,7 @@ app.intent('DiscordianDateIntent',
       "Date":     "AMAZON.DATE"
 		},
 		"utterances":[
-			"{for|the|} {discordian date|} {Date}"
+			"{for|} {the|} {discordian|} {date|} {Date}"
 		]
 	},
   function(request, response) {
@@ -39,9 +39,9 @@ app.intent('DiscordianDateIntent',
 			return;
 		}
 		if( date.same().day(Date.today()) ) {
-			response.say("Today is ");
+			response.say("Today is... ");
 		} else {
-			response.say(request.slot('Date') + " is ");
+			response.say(request.slot('Date') + " is... ");
 		}
 		response.say(discordianDate(date));
 	}
