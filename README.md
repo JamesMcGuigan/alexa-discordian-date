@@ -20,8 +20,8 @@ open http://localhost:8080/alexa/alexa-discordian-date
 ### Uploading to AWS
 
 - Upload DiscordianDateLambda.zip to Amazon Lambda Console - [https://eu-west-1.console.aws.amazon.com/lambda/home?region=eu-west-1#/functions/DiscordianDate?tab=code](https://eu-west-1.console.aws.amazon.com/lambda/home?region=eu-west-1#/functions/DiscordianDate?tab=code)
-    - Upload Schema Files to Alexa Developer Console: [https://developer.amazon.com/edw/home.html#/skill/amzn1.ask.skill.3956afb2-ceb8-46d2-bd6e-16f50055b932/en_US/info](https://developer.amazon.com/edw/home.html#/skill/amzn1.ask.skill.3956afb2-ceb8-46d2-bd6e-16f50055b932/en_US/info)
-    - BUG: Unpublished Skills don't seem to work on my physical hardware but do work via [https://echosim.io/]()
+- Upload Schema Files to Alexa Developer Console: [https://developer.amazon.com/edw/home.html#/skill/amzn1.ask.skill.3956afb2-ceb8-46d2-bd6e-16f50055b932/en_US/info](https://developer.amazon.com/edw/home.html#/skill/amzn1.ask.skill.3956afb2-ceb8-46d2-bd6e-16f50055b932/en_US/info)
+- BUG: Unpublished Skills don't seem to work on my physical hardware but do work via [https://echosim.io/]()
 
 ### Alexa Tutorials
 - [https://www.youtube.com/watch?v=QxgdPI1B7rg&list=PL2KJmkHeYQTO6ci5KF08mvHYdAZu2jgkJ](https://www.youtube.com/watch?v=QxgdPI1B7rg&list=PL2KJmkHeYQTO6ci5KF08mvHYdAZu2jgkJ)
