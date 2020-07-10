@@ -54,7 +54,7 @@ Date.prototype.isToday = function() {
   ;
 };
 
-function discordianDate(date) {
+function discordianDateParts(date) {
   if( !date ) { date = new Date(); }
 
   var y                = date.getFullYear();
@@ -63,7 +63,7 @@ function discordianDate(date) {
   var celebrateHoliday = null;
 
   if( date.isLeapYear() ) {
-    if( dayOfYear == 60 ) {
+    if( dayOfYear === 60 ) {
       celebrateHoliday = "St. Tib's Day";
     }
     else if( dayOfYear > 60 ) {
@@ -75,20 +75,32 @@ function discordianDate(date) {
   var divDay = Math.floor(dayOfYear / 73);
 
   var seasonDay = (dayOfYear % 73) + 1;
-  if( seasonDay == 5 ) {
+  if( seasonDay === 5 ) {
     celebrateHoliday = apostle[divDay];
   }
-  if( seasonDay == 50 ) {
+  if( seasonDay === 50 ) {
     celebrateHoliday = holiday[divDay];
   }
 
   var season    = seasons[divDay];
   var dayOfWeek = weekday[dayOfYear % 5];
 
-  var nth = (seasonDay % 10 == 1) ? 'st'
-          : (seasonDay % 10 == 2) ? 'nd'
-          : (seasonDay % 10 == 3) ? 'rd'
-                                  : 'th';
+  var nth = (seasonDay % 10 === 1) ? 'st'
+      : (seasonDay % 10 === 2) ? 'nd'
+      : (seasonDay % 10 === 3) ? 'rd'
+      : 'th';
+
+  return {
+    yold,
+    dayOfWeek,
+    seasonDay,
+    season,
+    celebrateHoliday,
+    nth,
+  }
+}
+function discordianDate(date) {
+  const { yold, dayOfWeek, seasonDay, season, celebrateHoliday, nth } = discordianDateParts(date);
 
   return "" //(date.isToday() ? "Today is " : '')
          + dayOfWeek
@@ -99,20 +111,65 @@ function discordianDate(date) {
     ;
 }
 
-function test(y, m, d, result) {
-  console.assert((discordianDate(new Date(y, m, d)) == result), [y, m, d, discordianDate(new Date(y, m, d)), result]);
+function nextHolyday(date) {
+  if( !date ) { date = new Date(); }
+
+  let daysOfWeek = [];
+  for( let days=0; days <= 50; days+=1 ) {
+    let loopyDate = new Date( new Date(date).setDate(date.getDate() + days) );
+    let { yold, dayOfWeek, seasonDay, season, celebrateHoliday, nth } = discordianDateParts(loopyDate);
+
+    if( days !== 0 ) { daysOfWeek.push(dayOfWeek); }
+    if( celebrateHoliday ) {
+      if( loopyDate.isToday() ) {
+        return "Today is " + discordianDate(date);
+      } else {
+        daysOfWeek = ( days <= 5 ) ? daysOfWeek.join(' ') : '';
+        return `${celebrateHoliday} is in ${days} days ${daysOfWeek}`.trim();
+      }
+    }
+  }
+}
+function lastHolyday(date) {
+  if( !date ) { date = new Date(); }
+
+  let daysOfWeek = [];
+  for( let days=0; days <= -50; days-=1 ) {
+    let loopyDate = new Date( new Date(date).setDate(date.getDate() + days) );
+    let { yold, dayOfWeek, seasonDay, season, celebrateHoliday, nth } = discordianDateParts(loopyDate);
+
+    if( days !== 0 ) { daysOfWeek.push(dayOfWeek); }
+    if( celebrateHoliday ) {
+      if( loopyDate.isToday() ) {
+        return "Today is " + discordianDate(date);
+      } else {
+        daysOfWeek = ( days <= 5 ) ? daysOfWeek.join(' ') : '';
+        return `${celebrateHoliday} was ${days} days ago ${daysOfWeek}`.trim();
+      }
+    }
+  }
+}
+
+function testDiscordianDate(y, m, d, result) {
+  console.assert((discordianDate(new Date(y, m, d)) === result), [y, m, d, discordianDate(new Date(y, m, d)), result]);
 }
 
 // Only run test code if node calls this file directly
 if( require.main === module ) {
   console.log(discordianDate(new Date(Date.now())));
-  test(2010, 6, 22, "Pungenday, the 57th day of Confusion in the YOLD 3176");
-  test(2012, 1, 28, "Prickle-Prickle, the 59th day of Chaos in the YOLD 3178");
-  test(2012, 1, 29, "Setting Orange, the 60th day of Chaos in the YOLD 3178. Celebrate St. Tib's Day!");
-  test(2012, 2,  1, "Setting Orange, the 60th day of Chaos in the YOLD 3178");
-  test(2010, 0,  5, "Setting Orange, the 5th day of Chaos in the YOLD 3176. Celebrate Mungday!");
-  test(2011, 4,  3, "Pungenday, the 50th day of Discord in the YOLD 3177. Celebrate Discoflux!");
-  test(2015, 9, 19, "Boomtime, the 73rd day of Bureaucracy in the YOLD 3181");
+  console.log(nextHolyday());
+
+  testDiscordianDate(2010, 6, 22, "Pungenday, the 57th day of Confusion in the YOLD 3176");
+  testDiscordianDate(2012, 1, 28, "Prickle-Prickle, the 59th day of Chaos in the YOLD 3178");
+  testDiscordianDate(2012, 1, 29, "Setting Orange, the 60th day of Chaos in the YOLD 3178. Celebrate St. Tib's Day!");
+  testDiscordianDate(2012, 2,  1, "Setting Orange, the 60th day of Chaos in the YOLD 3178");
+  testDiscordianDate(2010, 0,  5, "Setting Orange, the 5th day of Chaos in the YOLD 3176. Celebrate Mungday!");
+  testDiscordianDate(2011, 4,  3, "Pungenday, the 50th day of Discord in the YOLD 3177. Celebrate Discoflux!");
+  testDiscordianDate(2015, 9, 19, "Boomtime, the 73rd day of Bureaucracy in the YOLD 3181");
 }
 
-module.exports = discordianDate;
+module.exports = {
+  discordianDate,
+  nextHolyday,
+  lastHolyday,
+};

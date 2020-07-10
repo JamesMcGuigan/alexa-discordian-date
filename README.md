@@ -33,7 +33,21 @@ open http://localhost:8080/alexa/alexa-discordian-date
 ### Sample Utterances
 ```
 DiscordianDateTodayIntent	for the discordian date
+DiscordianDateTodayIntent	the discordian date
+DiscordianDateTodayIntent	for discordian date
+DiscordianDateTodayIntent	discordian date
 DiscordianDateTodayIntent	for the date
+DiscordianDateTodayIntent	the date
+DiscordianDateTodayIntent	for date
+DiscordianDateTodayIntent	date
+DiscordianDateTodayIntent	for the discordian
+DiscordianDateTodayIntent	the discordian
+DiscordianDateTodayIntent	for discordian
+DiscordianDateTodayIntent	discordian
+DiscordianDateTodayIntent	for the
+DiscordianDateTodayIntent	the
+DiscordianDateTodayIntent	for
+DiscordianDateTodayIntent	stardate
 DiscordianDateIntent	for the discordian date {Date}
 DiscordianDateIntent	the discordian date {Date}
 DiscordianDateIntent	for discordian date {Date}
@@ -50,6 +64,37 @@ DiscordianDateIntent	for the {Date}
 DiscordianDateIntent	the {Date}
 DiscordianDateIntent	for {Date}
 DiscordianDateIntent	{Date}
+NextHolydayIntent       Holyday
+NextHolydayIntent       Holiday
+NextHolydayIntent       For the next Holiday
+NextHolydayIntent       When is the next Holyday
+NextHolydayIntent       When to celebrate
+NextHolydayIntent       When should we party
+NextHolydayIntent       The next party
+NextHolydayIntent       The next saints day
+NextHolydayIntent       The next apostle's day
+NextHolydayIntent       apostle's day
+LastHolydayIntent       last Holiday
+LastHolydayIntent       last Holyday
+LastHolydayIntent       For the last Holiday
+LastHolydayIntent       When was the last discordian Holyday
+LastHolydayIntent       When was the last saint's day
+LastHolydayIntent       When was the last apostle's day
+LastHolydayIntent       When should have we celebrated
+SeasonIntent            season
+SeasonIntent            month
+SeasonIntent            which season is this
+SeasonIntent            what time of year is it
+SeasonIntent            what is the season
+SeasonIntent            what is the discordian season
+SeasonIntent            season
+YearIntent              year
+YearIntent              what year is it
+YearIntent              what is the year
+YearIntent              what is the discordian year
+YearIntent              what orbit is it?
+SinkIntent              sink
+SinkIntent              Sink!
 ```
 
 ### Intent Schema

@@ -14,7 +14,19 @@
       ]
     },
     {
-      "intent": "AMAZON.HelpIntent"
+      "intent": "AMAZON.NextHolydayIntent"
+    },
+    {
+      "intent": "AMAZON.LastHolydayIntent"
+    },
+    {
+      "intent": "AMAZON.SeasonIntent"
+    },
+    {
+      "intent": "AMAZON.YearIntent"
+    },
+    {
+      "intent": "AMAZON.SinkIntent"
     },
     {
       "intent": "AMAZON.StopIntent"
