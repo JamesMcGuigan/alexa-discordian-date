@@ -26,15 +26,15 @@ Discordian Calendar: http://www.principiadiscordia.com/book/41.php
 Source Code: https://github.com/JamesMcGuigan/alexa-discordian-date
 
 
-- Example Phrases
-"Alexa, ask discordian date"
-"Alexa, ask discordian date the stardate"
-"Alexa, ask discordian date for May 3rd 2020"
-"Alexa, ask discordian date February Zero"
-"Alexa, ask discordian date what year is this"
-"Alexa, ask discordian date what is the current season"
-"Alexa, ask discordian date when is the next holyday"
-"Alexa, ask discordian date Sink!"
+Example Phrases
+- "Alexa, ask discordian date"
+- "Alexa, ask discordian date the stardate"
+- "Alexa, ask discordian date for May 3rd 2020"
+- "Alexa, ask discordian date February Zero"
+- "Alexa, ask discordian date what year is this"
+- "Alexa, ask discordian date what is the current season"
+- "Alexa, ask discordian date when is the next holyday"
+- "Alexa, ask discordian date Sink!"
 
 Keywords:
 ddate, date, discordian date, fnord

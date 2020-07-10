@@ -1,38 +1,143 @@
 {
-  "intents": [
-    {
-      "intent": "DiscordianDateTodayIntent",
-      "slots": []
-    },
-    {
-      "intent": "DiscordianDateIntent",
-      "slots": [
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "discordian date",
+      "intents": [
         {
-          "name": "Date",
-          "type": "AMAZON.DATE"
+          "name": "DiscordianDateTodayIntent",
+          "slots": [],
+          "samples": [
+            "for the discordian date",
+            "the discordian date",
+            "for discordian date",
+            "discordian date",
+            "for the date",
+            "the date",
+            "for date",
+            "date",
+            "for the discordian",
+            "the discordian",
+            "for the discordian",
+            "discordian",
+            "for the current stardate",
+            "something",
+            "anything",
+            "all hail discordia"
+          ]
+        },
+        {
+          "name": "DiscordianDateIntent",
+          "slots": [
+            {
+              "name": "Date",
+              "type": "AMAZON.DATE"
+            }
+          ],
+          "samples": [
+            "for the discordian date {Date}",
+            "the discordian date {Date}",
+            "for discordian date {Date}",
+            "discordian date {Date}",
+            "for the date {Date}",
+            "the date {Date}",
+            "for date {Date}",
+            "date {Date}",
+            "for the discordian {Date}",
+            "the discordian {Date}",
+            "for discordian {Date}",
+            "discordian {Date}",
+            "for the {Date}",
+            "the {Date}",
+            "for {Date}",
+            "{Date}"
+          ]
+        },
+        {
+          "name": "NextHolydayIntent",
+          "slots": [],
+          "samples": [
+            "Holyday",
+            "Holiday",
+            "For the next Holiday",
+            "When is the next Holyday",
+            "When to celebrate",
+            "When should we party",
+            "The next party",
+            "The next saints day",
+            "The next apostle's day",
+            "apostle's day"
+          ]
+        },
+        {
+          "name": "LastHolydayIntent",
+          "slots": [],
+          "samples": [
+            "last Holiday",
+            "last Holyday",
+            "For the last Holiday",
+            "When was the last discordian Holyday",
+            "When was the last saint's day",
+            "When was the last apostle's day",
+            "When should have we celebrated"
+          ]
+        },
+        {
+          "name": "SeasonIntent",
+          "slots": [],
+          "samples": [
+            "season",
+            "what month is it",
+            "which season is this",
+            "what time of year is it",
+            "what is the season",
+            "what is the discordian season",
+            "season"
+          ]
+        },
+        {
+          "name": "YearIntent",
+          "slots": [],
+          "samples": [
+            "year",
+            "what year is it",
+            "what is the year",
+            "what is the discordian year",
+            "what orbit is it"
+          ]
+        },
+        {
+          "name": "SinkIntent",
+          "slots": [],
+          "samples": [
+            "sink",
+            "Sink"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "slots": [],
+          "samples": [
+            "start again",
+            "restart",
+            "fnord"
+          ]
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "help"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
         }
-      ]
-    },
-    {
-      "intent": "AMAZON.NextHolydayIntent"
-    },
-    {
-      "intent": "AMAZON.LastHolydayIntent"
-    },
-    {
-      "intent": "AMAZON.SeasonIntent"
-    },
-    {
-      "intent": "AMAZON.YearIntent"
-    },
-    {
-      "intent": "AMAZON.SinkIntent"
-    },
-    {
-      "intent": "AMAZON.StopIntent"
-    },
-    {
-      "intent": "AMAZON.CancelIntent"
+      ],
+      "types": []
     }
-  ]
+  }
 }

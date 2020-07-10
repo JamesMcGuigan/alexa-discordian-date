@@ -1,0 +1,16 @@
+- "Alexa, ask discordian date"
+    - "Today is... Boomtime, the 2nd day of Chaos in the YOLD 3183"
+
+- "Alexa, ask discordian date for tomorrow"
+    - "January 3rd is... Pungenday, the 3rd day of Chaos in the YOLD 3183"
+
+- "Alexa, ask discordian date for May 3rd 2034"
+    - "May 3rd 2016 is... Pungenday, the 50th day of Discord in the YOLD 3200. Celebrate Discoflux!"
+
+- "Alexa, ask discordian date February Zero"
+- "Alexa, ask discordian date what year is this"
+- "Alexa, ask discordian date what is the current season"
+- "Alexa, ask discordian date when is the next holyday"
+- "Alexa, ask discordian date Sink!"
+
+Discordan humour also suggests trying to ask Alexa for a non-existent discotdian date such as February Zero

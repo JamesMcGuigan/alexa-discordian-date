@@ -124,7 +124,7 @@ app.intent('YearIntent',
 	}
 );
 
-app.intent('AMAZON.SinkIntent', {
+app.intent('SinkIntent', {
 	"utterances": [
 		"sink!"
 	]
